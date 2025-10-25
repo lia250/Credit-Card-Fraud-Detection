@@ -1,4 +1,4 @@
-# <p dir="rtl" align="justify">سیستم تشخیص کلاهبرداری کارت اعتباری با الگوریتم Naive Bayes</p>
+# <p dir="rtl" align="justify">1. سیستم تشخیص کلاهبرداری کارت اعتباری با الگوریتم Naive Bayes</p>
 
 ### <p dir="rtl" align="justify">معرفی پروژه:</p>
 <p dir="rtl" align="justify">این پروژه یک سیستم تشخیص کلاهبرداری کارت اعتباری با استفاده از الگوریتم Naive Bayes پیاده‌سازی کرده است. هدف اصلی شناسایی تراکنش‌های متقلبانه با دقت بالا است.</p>
@@ -64,3 +64,31 @@
 | Recall | 81.69% |
 | Precision | 95.08% |
 | F1-Score | 87.88% |
+
+# 2. run project:
+### 1. Create a virtual environment in project root not src/ (windows):
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+### or
+### Create a virtual environment in project root not src/ (linux)
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 2. Install requirements:
+```
+pip install -r requirements.txt
+```
+
+### 3. 
+```
+cd src
+```
+### windows:
+```
+python .\credit-card-fraud-detection.py
+```
