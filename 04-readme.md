@@ -29,7 +29,7 @@
 </ul>
 
 ### <p dir="rtl" align="justify">توزیع کلاس‌ها:</p>
-<p dir="rtl" align="justify">دیتaset دارای عدم تعادل شدید است:</p>
+<p dir="rtl" align="justify">دیتاست دارای عدم تعادل شدید است:</p>
 <ul dir="rtl" align="justify">
    <li>تراکنش‌های عادی: 99.83%</li>
    <li>تراکنش‌های متقلبانه: 0.17%</li>
