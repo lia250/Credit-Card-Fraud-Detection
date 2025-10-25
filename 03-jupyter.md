@@ -8,7 +8,9 @@ git checkout -b feature/jupyter-credit-card-fraud-detection
 
 # 3. 
 ### src/credit-card-fraud-detection.ipynb:
-### touch src/credit-card-fraud-detection.ipynb
+```
+touch src/credit-card-fraud-detection.ipynb
+```
 
 ### Cell 1: Import Libraries
 ```
