@@ -1,7 +1,16 @@
 # 1.
 Install "Jupyter" extension in VS Code
 
-# 2. 
+# 2. git branch:
+```
+git checkout -b feature/jupyter-credit-card-fraud-detection
+```
+
+# 3. 
+### src/credit-card-fraud-detection.ipynb:
+### touch src/credit-card-fraud-detection.ipynb
+
+### Cell 1: Import Libraries
 ```
 # Cell 1: Import Libraries
 import pandas as pd
@@ -25,6 +34,10 @@ plt.rcParams['axes.unicode_minus'] = False
 print("=" * 70)
 print("Credit Card Fraud Detection System with Naive Bayes Algorithm")
 print("=" * 70)
+```
+
+### Cell 2: Load Dataset from Online Sources
+```
 # Cell 2: Load Dataset from Online Sources
 print("\n1. Loading Dataset from Online Sources...")
 
@@ -65,6 +78,10 @@ except Exception as e:
     
     df = pd.DataFrame(data)
     print("✓ Synthetic dataset created")
+```
+
+### Cell 3: Comprehensive Dataset Report
+```
 # Cell 3: Comprehensive Dataset Report
 print("\n2. Comprehensive Dataset Report:")
 print("-" * 50)
@@ -89,6 +106,10 @@ missing_values = df.isnull().sum()
 print(missing_values[missing_values > 0])
 if missing_values.sum() == 0:
     print("✓ No missing values found")
+```
+
+### Cell 4: Exploratory Data Analysis (EDA) - ONLY CLASS DISTRIBUTION CHART
+```
 # Cell 4: Exploratory Data Analysis (EDA) - ONLY CLASS DISTRIBUTION CHART
 print("\n3. Exploratory Data Analysis...")
 plt.figure(figsize=(8, 6))
@@ -99,6 +120,10 @@ plt.pie(class_counts.values, labels=['Normal Transaction', 'Fraudulent Transacti
         autopct='%1.3f%%', colors=['lightgreen', 'red'], startangle=90)
 plt.title('Class Distribution in Dataset\n(Highly Imbalanced)')
 plt.show()
+```
+
+### Cell 5: Data Preprocessing
+```
 # Cell 5: Data Preprocessing
 print("\n4. Data Preprocessing...")
 print("-" * 50)
@@ -123,6 +148,10 @@ y = df_processed['Class']
 
 print(f"X dimensions after preprocessing: {X.shape}")
 print(f"y dimensions after preprocessing: {y.shape}")
+```
+
+### Cell 6: Handling Data Imbalance with Under-Sampling
+```
 # Cell 6: Handling Data Imbalance with Under-Sampling
 print("\n5. Handling Data Imbalance...")
 
@@ -133,6 +162,10 @@ rus = RandomUnderSampler(random_state=42, sampling_strategy=0.5)
 X_resampled, y_resampled = rus.fit_resample(X, y)
 
 print(f"Class distribution after sampling: {Counter(y_resampled)}")
+```
+
+### Cell 7: Split Data into Train and Test Sets
+```
 # Cell 7: Split Data into Train and Test Sets
 print("\n6. Splitting Data...")
 X_train, X_test, y_train, y_test = train_test_split(
@@ -143,6 +176,10 @@ print(f"Training data dimensions: {X_train.shape}")
 print(f"Testing data dimensions: {X_test.shape}")
 print(f"Class distribution in training data: {Counter(y_train)}")
 print(f"Class distribution in testing data: {Counter(y_test)}")
+```
+
+### Cell 8: Data Standardization
+```
 # Cell 8: Data Standardization
 print("\n7. Standardizing Data...")
 scaler_final = StandardScaler()
@@ -150,11 +187,19 @@ X_train_scaled = scaler_final.fit_transform(X_train)
 X_test_scaled = scaler_final.transform(X_test)
 
 print("✓ Data standardized")
+```
+
+### Cell 9: Train Naive Bayes Model
+```
 # Cell 9: Train Naive Bayes Model
 print("\n8. Training Naive Bayes Model...")
 model = GaussianNB()
 model.fit(X_train_scaled, y_train)
 print("✓ Model trained successfully")
+```
+
+### Cell 10: Model Prediction and Evaluation
+```
 # Cell 10: Model Prediction and Evaluation
 print("\n9. Model Evaluation...")
 y_pred = model.predict(X_test_scaled)
@@ -172,16 +217,28 @@ print(f"Precision: {precision:.4f}")
 # Calculate F1-Score
 f1 = 2 * (precision * recall) / (precision + recall)
 print(f"F1-Score: {f1:.4f}")
+```
+
+### Cell 11: Confusion Matrix
+```
 # Cell 11: Confusion Matrix
 print("\n10. Confusion Matrix:")
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
+```
+
+### Cell 12: Complete Classification Report
+```
 # Cell 12: Complete Classification Report
 print("\n11. Complete Classification Report:")
 print("-" * 50)
 print(classification_report(y_test, y_pred, 
                           target_names=['Normal Transaction', 'Fraudulent Transaction']))
+```
+
+### Cell 13: Model Performance Analysis on Original Data
+```
 # Cell 13: Model Performance Analysis on Original Data
 print("\n12. Evaluation on Original Data (Real Test)...")
 # Use original data for final test
@@ -206,6 +263,10 @@ print(f"Recall on original data: {recall_orig:.4f}")
 print(f"Precision on original data: {precision_orig:.4f}")
 print("Confusion matrix on original data:")
 print(cm_orig)
+```
+
+### Cell 14: Final Conclusion
+```
 # Cell 14: Final Conclusion
 print("\n" + "=" * 70)
 print("Final Conclusion and Recommendations")
