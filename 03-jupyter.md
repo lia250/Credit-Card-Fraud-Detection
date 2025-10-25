@@ -1,5 +1,5 @@
 # 1.
-Install "Jupyter" extension in VS Code
+- Install "Jupyter" extension in VS Code
 
 # 2. git branch:
 ```
