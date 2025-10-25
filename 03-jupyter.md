@@ -304,3 +304,23 @@ print("\n" + "=" * 70)
 print("Model Training and Evaluation Completed Successfully!")
 print("=" * 70)
 ```
+
+```
+git status
+git add .
+git commit -m "implement credit card fraud detection with Naive Bayes and jupyter" 
+```
+```
+git checkout develop
+git merge feature/credit-card-fraud-detection
+```
+
+### remove branch:
+```
+git branch -d feature/jupyter-credit-card-fraud-detection
+```
+
+### push branch main:
+```
+git push -u origin main  
+```
