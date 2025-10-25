@@ -324,5 +324,9 @@ git branch -d feature/jupyter-credit-card-fraud-detection
 
 ### push branch main:
 ```
+git checkout main
+git merge develop 
+```
+```
 git push -u origin main  
 ```
