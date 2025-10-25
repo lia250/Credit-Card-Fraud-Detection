@@ -19,3 +19,18 @@
    <li>تراکنش‌های عادی: 284,315 (99.83%)</li>
    <li>تراکنش‌های متقلبانه: 492 (0.17%)</li>
 </ul>
+
+### <p dir="rtl" align="justify">ویژگی‌های دیتاست:</p>
+<ul dir="rtl" align="justify">
+   <li>ویژگی‌های V1 تا V28: نتایج تحلیل PCA (محافظت‌شده)</li>
+   <li>Time: زمان تراکنش</li>
+   <li>Amount: مبلغ تراکنش</li>
+   <li>Class: برچسب (0=عادی, 1=متقلبانه)</li>
+</ul>
+
+### <p dir="rtl" align="justify">توزیع کلاس‌ها:</p>
+<p dir="rtl" align="justify">دیتaset دارای عدم تعادل شدید است:</p>
+<ul dir="rtl" align="justify">
+   <li>تراکنش‌های عادی: 99.83%</li>
+   <li>تراکنش‌های متقلبانه: 0.17%</li>
+</ul>
