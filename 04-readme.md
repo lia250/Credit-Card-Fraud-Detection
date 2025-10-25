@@ -28,9 +28,39 @@
    <li>Class: برچسب (0=عادی, 1=متقلبانه)</li>
 </ul>
 
+
 ### <p dir="rtl" align="justify">توزیع کلاس‌ها:</p>
 <p dir="rtl" align="justify">دیتاست دارای عدم تعادل شدید است:</p>
 <ul dir="rtl" align="justify">
    <li>تراکنش‌های عادی: 99.83%</li>
    <li>تراکنش‌های متقلبانه: 0.17%</li>
 </ul>
+
+### <p dir="rtl" align="justify">مراحل پیش‌پردازش:</p>
+<ul dir="rtl" align="justify">
+   <li>حذف داده‌های تکراری: 1,081 نمونه تکراری حذف شد</li>
+   <li>نرمال‌سازی: استانداردسازی ویژگی‌های Time و Amount با RobustScaler</li>
+   <li>مدیریت عدم تعادل: استفاده از RandomUnderSampler</li>
+</ul>
+
+### <p dir="rtl" align="justify">نمونه‌گیری مجدد</p>
+<ul dir="rtl" align="justify">
+   <li>قبل از نمونه‌گیری: 283,253 عادی و 473 متقلبانه</li>
+   <li>بعد از نمونه‌گیری: 946 عادی و 473 متقلبانه</li>
+</ul>
+
+### <p dir="rtl" align="justify">الگوریتم مورد استفاده:</p>
+<ul dir="rtl" align="justify">
+   <li>الگوریتم: Gaussian Naive Bayes</li>
+   <li>تقسیم داده: 70% آموزش، 30% آزمون</li>
+   <li>استانداردسازی: StandardScaler</li>
+</ul>
+
+### <p dir="rtl" align="justify">نتایج روی داده متعادل‌شده:</p>
+
+| Metric | Value |
+|--------|-------|
+| Accuracy | 92.49% |
+| Recall | 81.69% |
+| Precision | 95.08% |
+| F1-Score | 87.88% |
