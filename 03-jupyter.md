@@ -314,7 +314,7 @@ git commit -m "implement credit card fraud detection with Naive Bayes and jupyte
 ```
 ```
 git checkout develop
-git merge feature/credit-card-fraud-detection
+git merge feature/jupyter-credit-card-fraud-detection
 ```
 
 ### remove branch:
